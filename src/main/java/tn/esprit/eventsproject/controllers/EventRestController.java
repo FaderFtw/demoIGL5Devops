@@ -35,7 +35,7 @@ public class EventRestController {
     }
     @PutMapping("/addAffectLog/{description}")
     public Logistics addAffectLog(@RequestBody Logistics logistics,@PathVariable("description") String descriptionEvent){
-        logger.log(Level.INFO, "New Logistics added");
+        logger.log(Level.INFO, "New Logistics added version3");
         return eventServices.addAffectLog(logistics,descriptionEvent);
     }
     @GetMapping("/getLogs/{d1}/{d2}")

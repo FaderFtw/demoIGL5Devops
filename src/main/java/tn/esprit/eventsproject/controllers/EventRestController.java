@@ -35,10 +35,12 @@ public class EventRestController {
     }
     @PutMapping("/addAffectLog/{description}")
     public Logistics addAffectLog(@RequestBody Logistics logistics,@PathVariable("description") String descriptionEvent){
+        logger.log(Level.INFO, "New Logistics added");
         return eventServices.addAffectLog(logistics,descriptionEvent);
     }
     @GetMapping("/getLogs/{d1}/{d2}")
     public List<Logistics> getLogistiquesDates (@PathVariable("d1") LocalDate date_debut, @PathVariable("d2") LocalDate date_fin){
+        logger.log(Level.INFO,"Getting logistics between dates");
         return eventServices.getLogisticsDates(date_debut,date_fin);
     }
 }

@@ -30,7 +30,7 @@ public class EventRestController {
     }
     @PostMapping("/addEvent")
     public Event addEvent(@RequestBody Event event){
-        logger.log(Level.INFO, "New event added");
+        logger.log(Level.INFO, "New event added with participants in Feature2 branch");
         return eventServices.addAffectEvenParticipant(event);
     }
     @PutMapping("/addAffectLog/{description}")

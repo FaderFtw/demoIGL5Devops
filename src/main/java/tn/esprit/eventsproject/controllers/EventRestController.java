@@ -26,6 +26,7 @@ public class EventRestController {
     }
     @PostMapping("/addEvent/{id}")
     public Event addEventPart(@RequestBody Event event, @PathVariable("id") int idPart){
+        logger.log(Level.INFO, "New event added with participant in Feature3 branch");
         return eventServices.addAffectEvenParticipant(event, idPart);
     }
     @PostMapping("/addEvent")
